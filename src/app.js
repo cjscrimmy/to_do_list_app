@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
         el:"#app",
         data: {
             items: [
-                {name: "Tidy Bedroom", priority: "high"},
-                {name: "Wash Dishes", priority: "low"},
-                {name: "Do Shopping", priority: "high"}
+                {name: "Tidy Bedroom", priority: false},
+                {name: "Wash Dishes", priority: false},
+                {name: "Do Shopping", priority: true}
             ],
             newItem:""
         },
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             saveNewItem: function (){
                 this.items.push({
                     name: this.newItem,
-                    priority: "high"
+                    priority: false
                 })
                 this.newItem ="";
             }

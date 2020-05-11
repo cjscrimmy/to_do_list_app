@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List App</title>
     <script src="./js/bundle.js"></script>
+    <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
     <div id="app">
         <form v-on:submit.prevent="saveNewItem">
             <input id="new-item" type="text" v-model="newItem"/>
 
-            <!-- <label for="high">High</label>
-            <input id="high" type="radio" value="high" v-model="radioButton"/>
-
-            <label for="low">Low</label>
-            <input id="low" type="radio" value="low" v-model="radioButton" /> -->
-
             <input type="submit" value ="save"/>
         </form>
         <ul>
-            <li v-for="(item, index) in items">
+            <li v-for="(item, index) in items" :class="item.priority ? 'high' : 'low' ">
                 <span>{{ item.name }}</span>
             </li>
         </ul>
