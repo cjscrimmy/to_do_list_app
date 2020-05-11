@@ -10,11 +10,18 @@
     <div id="app">
         <form v-on:submit.prevent="saveNewItem">
             <input id="new-item" type="text" v-model="newItem"/>
+
+            <!-- <label for="high">High</label>
+            <input id="high" type="radio" value="high" v-model="radioButton"/>
+
+            <label for="low">Low</label>
+            <input id="low" type="radio" value="low" v-model="radioButton" /> -->
+
             <input type="submit" value ="save"/>
         </form>
         <ul>
             <li v-for="(item, index) in items">
-                <span>{{ item.title }}</span>
+                <span>{{ item.name }}</span>
             </li>
         </ul>
     </div>
