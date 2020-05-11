@@ -8,6 +8,10 @@
 </head>
 <body>
     <div id="app">
+        <form v-on:submit.prevent="saveNewItem">
+            <input id="new-item" type="text" v-model="newItem"/>
+            <input type="submit" value ="save"/>
+        </form>
         <ul>
             <li v-for="(item, index) in items">
                 <span>{{ item.title }}</span>
