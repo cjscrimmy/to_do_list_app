@@ -7,8 +7,12 @@
     <script src="./js/bundle.js"></script>
 </head>
 <body>
-    <div id='app'>
-
+    <div id="app">
+        <ul>
+            <li v-for="(item, index) in items">
+                <span>{{ item.title }}</span>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
