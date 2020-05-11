@@ -9,7 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 {title: "Wash Dishes", priority: "low"},
                 {title: "Do Shopping", priority: "high"}
             ],
-            // newItem:""
+            newItem:""
+        },
+        methods: {
+            saveNewItem: function (){
+                this.items.push({
+                    title: this.newItem,
+                    priority: "high"
+                })
+                this.newItem ="";
+            }
         }
     });
 });
