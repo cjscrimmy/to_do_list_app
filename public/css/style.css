@@ -8,13 +8,13 @@ ul {
 li.high{
     border: 0.25em solid #ff0000;
     font-size: 14;
-    background-color: aquamarine;
+    color: #ff0000;
 }
 
 li.low{
-    border: 0.25em solid #00ff00;
+    border: 0.25em solid #0e910e;
     font-size: 14;
-    background-color: aquamarine;
+    color: #053f05;
 }
 
 li {
